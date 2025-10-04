@@ -53,3 +53,11 @@ function clearDisplay(){
     lastInputisOperator = false;
 }
 
+function calculate(){
+    if(dislpay.innerHTML === '' || currExp === '') return;
+    expressionDisplay.innerHTML = currExp + ' ' + '=';
+    let result = eval(currExp);
+    dislpay.innerHTML = result;
+    currExp = result;
+    lastInputisOperator = true;
+}
