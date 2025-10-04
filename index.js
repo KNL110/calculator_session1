@@ -26,4 +26,13 @@ function appendnumber(key){
         dislpay.value = "";
         lastInputisOperator = false;
     }
+
+    dislpay.value += key;
+}
+
+function appendOperator(key){
+    if(dislpay.value === '' || currExp === '') return;
+
+    currExp = dislpay.value;
+    expressionDisplay += currExp + ' ' + `${key}`;
 }
